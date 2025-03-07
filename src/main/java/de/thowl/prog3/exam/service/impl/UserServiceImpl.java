@@ -42,4 +42,17 @@ public class UserServiceImpl implements UserService {
         }
         return result;
     }
+
+    public User registerUser (User user){
+        return repository.save(user);
+    }
+
+    public void registerUser(String username, String password, String email) {
+        User user = new User();
+        user.setName(username);
+        //user.setPassword(passwordEncoder.encode(password)); // Passwörter niemals unverschlüsselt speichern!
+        user.setEmail(email);
+        repository.save(user);
+    }
+
 }
