@@ -3,12 +3,11 @@ package de.thowl.prog3.exam.web.api;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.thowl.prog3.exam.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import de.thowl.prog3.exam.service.UserService;
 import de.thowl.prog3.exam.storage.entities.User;
@@ -19,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/api/v1/users")
 public class UserController {
+    private final UserServiceImpl userServiceImpl;
 
     @Autowired
     @Qualifier("usermapper")
@@ -27,7 +27,8 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    public UserController() {
+    public UserController(UserServiceImpl userServiceImpl) {
+        this.userServiceImpl = userServiceImpl;
         log.debug("entering ctor");
     }
 
@@ -47,5 +48,14 @@ public class UserController {
         log.debug("entering getUserById, id={}", id);
         User u = this.service.getUser(id);
         return this.mapper.map(u);
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody User user){
+        if(userServiceImpl.getUser(user.getName()) != null){
+            return ResponseEntity.badRequest().body("Username already exists");
+        }
+        userServiceImpl.registerUser(user);
+        return ResponseEntity.ok("User successfully registered.");
     }
 }
