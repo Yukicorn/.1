@@ -6,6 +6,7 @@
     <title>Registrierung</title>
 </head>
 
+
 <body>
     <img th:src="@{/img/thowl_logo.png}" />
     <h1>Neuen Benutzer registrieren</h1>
@@ -20,6 +21,11 @@
 
         <p></p>
         <input type="submit" value="Registrieren">
+    </form>
+
+    <!-- logout.html -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
     </form>
 
 </body>

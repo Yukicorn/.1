@@ -3,29 +3,24 @@
         lang="en">
 
 <head>
-    <title>Registrierung</title>
+    <meta charset="UTF-8">
+    <title>Login</title>
 </head>
-
 
 <body>
     <img th:src="@{/img/thowl_logo.png}" />
-    <h1>Neuen Benutzer registrieren</h1>
+    <h1>Bitte melden Sie sich mit Ihren Nutzerdaten an.</h1>
 
-    <form class="form" method="POST" action="/register">
+    <form class="form" method="POST" action="/login">
         <label for="uname">Benutzername:</label>
         <input type="text" id="uname" name="username"/>
-        <label for="email">E-Mail-Adresse:</label>
-        <input type="text" id="email" name="email"/>
+        <!--entweder nutzername oder email angebbar?-->
+        <p></p>
         <label for="passwort">Passwort:</label>
         <input type="text" id="passwort" name="password"/>
 
         <p></p>
-        <input type="submit" value="Registrieren">
-    </form>
-
-    <!-- logout.html -->
-    <form th:action="@{/logout}" method="post">
-        <button type="submit">Logout</button>
+        <input type="submit" value="Anmelden">
     </form>
 
 </body>

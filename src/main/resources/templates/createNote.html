@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neue Notiz</title>
+</head>
+
+<body>
+    <img th:src="@{/img/thowl_logo.png}" />
+    <h1>Neue Notiz erstellen</h1>
+
+    <form class="form" method="POST" action="/createNote">
+        <label for="titel">Titel der Notiz:</label>
+        <input type="text" id="titel" name="noteTitel"/>
+
+        <input type="submit" value="Erstellen">
+    </form>
+
+    <!-- logout.html -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+
+</body>
+</html>
