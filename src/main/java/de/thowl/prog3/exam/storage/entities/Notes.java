@@ -29,4 +29,8 @@ public class Notes {
     private String content;
     private String tags;
     private LocalDateTime createdAt = LocalDateTime.now(); // speichere datum, uhrzeit notiz erstellt
+
+    @ManyToOne  // Eine Notiz gehört zu einem Benutzer
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }

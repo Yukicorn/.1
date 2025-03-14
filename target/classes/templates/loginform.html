@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<body>
+    <img th:src="@{/img/thowl_logo.png}" />
+    <h1>Bitte melden Sie sich mit Ihren Nutzerdaten an.</h1>
+
+    <form class="form" method="POST" action="/login">
+        <label for="uname">Benutzername:</label>
+        <input type="text" id="uname" name="username"/>
+        <!--entweder nutzername oder email angebbar?-->
+        <p></p>
+        <label for="passwort">Passwort:</label>
+        <input type="text" id="passwort" name="password"/>
+
+        <p></p>
+        <input type="submit" value="Anmelden">
+    </form>
+
+</body>
+</html>

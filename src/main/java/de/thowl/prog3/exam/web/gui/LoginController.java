@@ -1,6 +1,8 @@
 package de.thowl.prog3.exam.web.gui;
 
 import de.thowl.prog3.exam.service.impl.UserServiceImpl;
+import de.thowl.prog3.exam.storage.entities.User;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import de.thowl.prog3.exam.web.gui.form.LoginForm;
 import de.thowl.prog3.exam.web.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Slf4j
 @Controller
@@ -25,7 +28,7 @@ public class LoginController {
         return "loginform";
     }
 
-    @PostMapping("/login")
+    /*@PostMapping("/login")
     public String processLoginForm(Model model, LoginForm formdata){
         log.debug("entering loginForm");
         String username = formdata.getUsername();
@@ -35,7 +38,18 @@ public class LoginController {
 
         //user checken, ob vorhanden und ob Daten übereinstimmen
 
-        return "homepage";
+        return "createNote";
+    }*/
+    @PostMapping("/login")
+    public String login(@RequestParam String username, @RequestParam String password, HttpSession session) {
+        // Authentifiziere den Benutzer (z.B. über UserService)
+        User user = svc.authenticate(username, password);
+        if (user != null) {
+            session.setAttribute("user", user); // Benutzer in Session speichern
+            log.debug("Benutzer erfolgreich in Session gespeichert: "+user.getName());
+            return "redirect:/createNote";
+        }
+        return "login"; // Bei Fehler zurück zum Login
     }
 
 

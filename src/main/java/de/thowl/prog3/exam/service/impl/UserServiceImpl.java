@@ -55,4 +55,13 @@ public class UserServiceImpl implements UserService {
         repository.save(user);
     }
 
-}
+    public User authenticate(String username, String password) {
+        log.debug("entering authenticate(username={})", username);
+
+        // Benutzer anhand des Namens finden
+        User user = this.repository.findUserByName(username)
+                .orElseThrow(() -> new IllegalArgumentException("Benutzer nicht gefunden"));
+        return user;
+    }
+
+    }
