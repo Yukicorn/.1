@@ -1,1 +1,7 @@
+de\thowl\prog3\exam\ExamApplication.class
+de\thowl\prog3\exam\ServletInitializer.class
+de\thowl\prog3\exam\storage\entities\Notes.class
 de\thowl\prog3\exam\service\NotesService.class
+de\thowl\prog3\exam\web\api\DataNotFoundException.class
+de\thowl\prog3\exam\storage\entities\User.class
+de\thowl\prog3\exam\service\UserService.class

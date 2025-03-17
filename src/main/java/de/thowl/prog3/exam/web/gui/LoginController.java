@@ -28,18 +28,7 @@ public class LoginController {
         return "loginform";
     }
 
-    /*@PostMapping("/login")
-    public String processLoginForm(Model model, LoginForm formdata){
-        log.debug("entering loginForm");
-        String username = formdata.getUsername();
-        log.debug("Username ist: "+ username);
-        String password = formdata.getPassword();
-        log.debug("Passwort ist: "+ password);
 
-        //user checken, ob vorhanden und ob Daten übereinstimmen
-
-        return "createNote";
-    }*/
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session) {
         // Authentifiziere den Benutzer (z.B. über UserService)

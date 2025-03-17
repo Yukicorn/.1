@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import de.thowl.prog3.exam.web.gui.form.CreateNoteForm;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDateTime;
+
 @Slf4j
 @Controller
 public class CreateNoteController {
@@ -57,6 +59,12 @@ public class CreateNoteController {
 
         log.debug("Titel: " + noteTitel);
         //log.debug("User: " + user.getUser(user));
+
+        String notesTags = formdata.getTags();
+        note.setTags(notesTags);
+
+        String notesContent = formdata.getContent();
+        note.setContent(notesContent);
 
         note.setUser(user); // Setze den Benutzer in die Notiz
         svc.saveNote(note, session);

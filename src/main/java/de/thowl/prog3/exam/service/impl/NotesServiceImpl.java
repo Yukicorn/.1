@@ -10,6 +10,8 @@ import de.thowl.prog3.exam.storage.entities.User;
 import de.thowl.prog3.exam.web.api.DataNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Slf4j
 @Service
 public class NotesServiceImpl implements NotesService{
@@ -22,21 +24,6 @@ public class NotesServiceImpl implements NotesService{
         this.userRepository=userRepository;
     }
 
-
-    /*@Override
-    public Notes saveNote(Notes note, String username) throws DataNotFoundException {
-        // Finde den aktuell authentifizierten Nutzer
-        User user = userRepository.findUserByName(username)
-                .orElseThrow(() -> new DataNotFoundException("Nutzer nicht vorhanden."));
-
-        // Setze den Nutzer für die Notiz
-        note.setUser(user);
-        log.debug("Nutzer ist:" +user);
-
-        // Speichere die Notiz
-        log.debug("Notiztitel ist:" +note);
-        return noteRepository.save(note);
-    }*/
 
     @Override
     public Notes saveNote(Notes note, HttpSession session) throws DataNotFoundException {
@@ -51,6 +38,8 @@ public class NotesServiceImpl implements NotesService{
         // Setze den Benutzer für die Notiz
         note.setUser(user);
         log.debug("Aktuell authentifizierter Nutzer ist: " + user);
+
+
 
         // Speichere die Notiz
         log.debug("Notiztitel ist: " + note.getTitle());

@@ -5,6 +5,8 @@ import de.thowl.prog3.exam.storage.entities.User;
 import de.thowl.prog3.exam.web.api.DataNotFoundException;
 import jakarta.servlet.http.HttpSession;
 
+import java.time.LocalDateTime;
+
 public interface NotesService {
 
     //public Notes saveNote(Notes note, String username) throws DataNotFoundException;
