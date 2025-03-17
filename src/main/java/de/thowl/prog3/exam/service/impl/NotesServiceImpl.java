@@ -11,6 +11,7 @@ import de.thowl.prog3.exam.web.api.DataNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -43,8 +44,14 @@ public class NotesServiceImpl implements NotesService{
 
         // Speichere die Notiz
         log.debug("Notiztitel ist: " + note.getTitle());
+
+        log.debug("Image "+note.getImage());
+
         return noteRepository.save(note);
     }
 
+    public List<Notes> getAllNotes(){
+        return (List<Notes>) noteRepository.findAll();
+    }
 
 }
