@@ -4,14 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Notes">
+    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="CreateNoteFunktioniert">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createNote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +57,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Maven.exam [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
@@ -64,20 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1741985797863</updated>
     </task>
-    <task id="LOCAL-00002" summary="Notes">
-      <option name="closed" value="true" />
-      <created>1742222712429</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742222712429</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CreateNoteFunktioniert" />
-    <MESSAGE value="Notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateNoteFunktioniert" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.data.mapping.PropertyReferenceException" package="org.springframework.data.mapping" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

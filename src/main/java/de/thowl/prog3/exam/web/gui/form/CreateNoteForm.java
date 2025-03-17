@@ -12,4 +12,5 @@ public class CreateNoteForm {
     public HttpSession session;
     public String tags;
     public String content;
+    public byte[] image;
 }
