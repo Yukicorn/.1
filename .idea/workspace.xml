@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="CreateNoteFunktioniert">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createNote.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +39,10 @@
     "git-widget-placeholder": "backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +62,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741985797863</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CreateNoteFunktioniert">
+      <option name="closed" value="true" />
+      <created>1742220734186</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742220734186</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
