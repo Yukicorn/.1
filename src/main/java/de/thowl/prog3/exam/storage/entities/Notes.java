@@ -33,4 +33,8 @@ public class Notes {
     @ManyToOne  // Eine Notiz gehört zu einem Benutzer
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @Lob
+    @Column(columnDefinition = "LONGBLOB")  // Für große Binärdateien
+    private byte[] image;  // Hier wird das Bild als Byte-Array gespeichert
 }

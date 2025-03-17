@@ -7,6 +7,13 @@
     <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="CreateNoteFunktioniert">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +43,10 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Maven.exam [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "backend",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.sync"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,15 +66,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741985797863</updated>
     </task>
-    <task id="LOCAL-00002" summary="CreateNoteFunktioniert">
-      <option name="closed" value="true" />
-      <created>1742220734186</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742220734186</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
