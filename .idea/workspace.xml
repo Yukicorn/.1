@@ -4,29 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="CreateNoteFunktioniert">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Notes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createNote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.service.TestUserService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.service.TestUserService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.storage.TestUserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.storage.TestUserRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.service.TestUserService.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.service.TestUserService.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.storage.TestUserRepository.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.storage.TestUserRepository.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Yukicorn"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Yukicorn/.1.git",
+    "accountId": "dd14ff1a-bd8d-4e4b-b92a-0da4fce74913"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -55,12 +59,14 @@
   "keyToString": {
     "Application.ExamApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.exam [install].executor": "Run",
     "Maven.exam [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "backend",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

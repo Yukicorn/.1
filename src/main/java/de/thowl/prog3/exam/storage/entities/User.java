@@ -26,15 +26,15 @@ public class User {
     private Long id;
 
     @Column(name = "username")
-    @Size(min = 5, max = 30)
+    //@Size(min = 5, max = 30)
     private String name;
 
     @Column(name = "password")
-    @Size(min = 5, max = 30)
+    //@Size(min = 5, max = 30)
     private String password;
 
     @Column(name = "email")
-    @Size(min = 5, max = 30)
+    //@Size(min = 5, max = 30)
     private String email;
 
 

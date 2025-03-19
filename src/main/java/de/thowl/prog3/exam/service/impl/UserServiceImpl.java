@@ -6,11 +6,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.mindrot.jbcrypt.BCrypt;
 
 import de.thowl.prog3.exam.service.UserService;
 import de.thowl.prog3.exam.storage.entities.User;
 import de.thowl.prog3.exam.storage.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Service
@@ -46,14 +48,28 @@ public class UserServiceImpl implements UserService {
     public User registerUser (User user){
         return repository.save(user);
     }
-
+@Transactional
     public void registerUser(String username, String password, String email) {
+        log.debug("entering registerUser(username={}, email={})", username, email);
+
+        // Benutzer anhand des Benutzernamens finden (doppelte Benutzernamen verhindern)
+        Optional<User> existingUser = repository.findUserByName(username);
+        if (existingUser.isPresent()) {
+            throw new IllegalArgumentException("Benutzername bereits vergeben");
+        }
+
+        // Benutzer erstellen und Passwort hashen
         User user = new User();
         user.setName(username);
-        //user.setPassword(passwordEncoder.encode(password)); // Passwörter niemals unverschlüsselt speichern!
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt()); // Passwort hashen
+        user.setPassword(hashedPassword);
         user.setEmail(email);
+
+        // Benutzer in der DB speichern
         repository.save(user);
+        log.debug("Benutzer {} erfolgreich registriert", username);
     }
+
 
     public User authenticate(String username, String password) {
         log.debug("entering authenticate(username={})", username);
@@ -61,7 +77,12 @@ public class UserServiceImpl implements UserService {
         // Benutzer anhand des Namens finden
         User user = this.repository.findUserByName(username)
                 .orElseThrow(() -> new IllegalArgumentException("Benutzer nicht gefunden"));
-        return user;
-    }
 
+        // Passwort prüfen
+        if (BCrypt.checkpw(password, user.getPassword())) {
+            return user;  // Benutzer ist authentifiziert
+        } else {
+            throw new IllegalArgumentException("Falsches Passwort");
+        }
     }
+}
