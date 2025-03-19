@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Übersicht aller Notizen</h1>
+
+<div>
+    <a href="/createNote">Neue Notiz erstellen</a>
+</div>
+
+<div th:if="${not #lists.isEmpty(notesList)}">
+    <ul>
+        <li th:each="note : ${notesList}">
+            <h2 th:text="${note.title}"></h2>
+            <p th:text="${note.content}"></p>
+            <p><strong>Tags:</strong> <span th:text="${note.tags}"></span></p>
+            <p><strong>Erstellt am:</strong> <span th:text="${note.createdAt}"></span></p>
+
+            <!-- Hier kannst du einen Link zum Anzeigen des Bildes hinzufügen, falls es vorhanden ist -->
+            <div th:if="${note.image != null}">
+                <img th:src="@{'/image/' + ${note.id}}" alt="Notizbild" />
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div th:if="${#lists.isEmpty(notesList)}">
+    <p>Es gibt keine Notizen.</p>
+</div>
+
+</body>
+</html>
