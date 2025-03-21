@@ -4,34 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Dashboard vorhanden">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" afterDir="false" />
+    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Fehlerbehaftet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/RegistrationFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/noteOverview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/noteOverview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showuser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showuser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/RegistrationFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/RegistrationFormController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createNote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/loginform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/loginform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/noteOverview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/registerUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registerUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/showuser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/showuser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userform.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -94,13 +97,22 @@
       <option name="project" value="LOCAL" />
       <updated>1742228870787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fehlerbehaftet">
+      <option name="closed" value="true" />
+      <created>1742553383167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742553383167</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CreateNoteFunktioniert" />
     <MESSAGE value="Dashboard vorhanden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dashboard vorhanden" />
+    <MESSAGE value="Fehlerbehaftet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fehlerbehaftet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

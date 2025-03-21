@@ -2,18 +2,22 @@ package de.thowl.prog3.exam.service.impl;
 
 
 import de.thowl.prog3.exam.service.CategoryService;
+import de.thowl.prog3.exam.storage.entities.Category;
 import de.thowl.prog3.exam.web.api.DataNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import de.thowl.prog3.exam.storage.repositories.CategoryRepository;
 
+import java.util.List;
+
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
+    @Autowired
     private final CategoryRepository categoryRepository;
 
     @Autowired
-    public CategoryServiceImpl(CategoryRepository){
+    public CategoryServiceImpl(CategoryRepository categoryRepository){
         this.categoryRepository = categoryRepository;
     }
 
@@ -24,10 +28,12 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category getCategoryByName(String name) throws DataNotFoundException {
-        // Gibt eine Kategorie anhand des Namens zurück oder wirft eine Ausnahme, wenn sie nicht existiert
-        return categoryRepository.findByName(name)
-                .orElseThrow(() -> new DataNotFoundException("Kategorie nicht gefunden: " + name));
+    public Category getCategoryById(Long categoryId) throws DataNotFoundException {
+        if (categoryId == null) {
+            throw new IllegalArgumentException("Category ID darf nicht null sein!");
+        }
+        return categoryRepository.findById(categoryId)
+                .orElseThrow(() -> new DataNotFoundException("Kategorie nicht gefunden"));
     }
 
     @Override

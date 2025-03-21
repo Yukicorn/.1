@@ -18,6 +18,13 @@
         <p></p>
         <textarea cols="50" rows="10" style="text-align: left;"
                   name="content" id="content" placeholder="Inhalt der Notiz"></textarea>
+
+        <p></p>
+        <label for="category">Kategorie:</label>
+        <select id="category" name="categoryId"> <!-- Hier statt categoryName jetzt categoryId -->
+            <option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}"></option>
+        </select>
+
         <p></p>
         <!-- Bild-Upload-Feld hinzufügen -->
         <label for="imageFile">Bild hochladen:</label>

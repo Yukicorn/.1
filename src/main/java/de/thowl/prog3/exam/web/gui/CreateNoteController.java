@@ -1,7 +1,9 @@
 package de.thowl.prog3.exam.web.gui;
 
+import de.thowl.prog3.exam.service.CategoryService;
 import de.thowl.prog3.exam.service.UserService;
 import de.thowl.prog3.exam.service.impl.NotesServiceImpl;
+import de.thowl.prog3.exam.storage.entities.Category;
 import de.thowl.prog3.exam.storage.entities.Notes;
 import de.thowl.prog3.exam.storage.entities.User;
 import de.thowl.prog3.exam.storage.repositories.NotesRepository;
@@ -22,6 +24,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URLConnection;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -32,16 +35,19 @@ public class CreateNoteController {
     NotesServiceImpl svc;
     @Autowired
     UserService usvc;
+    @Autowired
+    CategoryService categoryService;
 
 
     @GetMapping("/createNote")
-    public String createNoteForm(){
-        log.debug("entering createNoteForm");
-        return "createNote";//erstellen name etc und dann neue seite um inhalt zu bearbeiten
+    public String createNoteForm(Model model) {
+        List<Category> categories = categoryService.getAllCategories();
+        model.addAttribute("categories", categories);
+        return "createNote"; // Thymeleaf Template
     }
 
     @PostMapping("/createNote")
-    public String createNote(@ModelAttribute Notes note, CreateNoteForm formdata, HttpSession session, @RequestParam("imageFile")MultipartFile file) throws DataNotFoundException, IOException {
+    public String createNote(@ModelAttribute Notes note, CreateNoteForm formdata, HttpSession session, @RequestParam("imageFile")MultipartFile file, @RequestParam("categoryId") Long categoryId) throws DataNotFoundException, IOException {
         log.debug("processing createNoteForm");
 
         if (session == null) {
@@ -83,7 +89,13 @@ public class CreateNoteController {
         }
 
         note.setUser(user); // Setze den Benutzer in die Notiz
-        svc.saveNote(note, session);
+
+        if (categoryId == null) {
+            log.error("Kategorie-ID ist NULL!");
+            throw new IllegalArgumentException("Kategorie-ID darf nicht null sein!");
+        }
+
+        svc.saveNote(note, session, categoryId);
 
         return "dashboard";
     }

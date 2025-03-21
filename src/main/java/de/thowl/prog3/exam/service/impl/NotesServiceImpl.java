@@ -1,6 +1,8 @@
 package de.thowl.prog3.exam.service.impl;
 
 import de.thowl.prog3.exam.service.CategoryService;
+import de.thowl.prog3.exam.storage.entities.Category;
+import de.thowl.prog3.exam.storage.entities.NoteType;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import de.thowl.prog3.exam.service.NotesService;
@@ -12,7 +14,6 @@ import de.thowl.prog3.exam.web.api.DataNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Slf4j
@@ -23,14 +24,14 @@ public class NotesServiceImpl implements NotesService{
     private final UserRepository userRepository;
     private final CategoryService categoryService;
 
-    public NotesServiceImpl(NotesRepository noteRepository, UserRepository userRepository){
+    public NotesServiceImpl(NotesRepository noteRepository, UserRepository userRepository, CategoryService categoryService){
         this.noteRepository=noteRepository;
         this.userRepository=userRepository;
         this.categoryService=categoryService;
     }
 
     @Override
-    public Notes saveNote(Notes note, HttpSession session, String categoryName) throws DataNotFoundException {
+    public Notes saveNote(Notes note, HttpSession session, Long categoryId) throws DataNotFoundException {
         // Abrufen des aktuellen Benutzers aus der Session
         User user = (User) session.getAttribute("user");
 
@@ -47,20 +48,33 @@ public class NotesServiceImpl implements NotesService{
 
         log.debug("Image "+note.getImage());
 
-        Category category = categoryService.getCategoryByName(categoryName)
+        Category category = categoryService.getCategoryById(categoryId);
 
         return noteRepository.save(note);
     }
 
-    public List<Notes> getAllNotes(){
-        return (List<Notes>) noteRepository.findAll();
+    public List<Notes> getAllNotesForCurrentUser(HttpSession session) throws DataNotFoundException {
+        // Benutzer aus der Session holen
+        User user = (User) session.getAttribute("user");
+
+        if (user == null) {
+            throw new DataNotFoundException("Kein Benutzer in der Session gefunden.");
+        }
+
+        // Lade nur die Notizen des aktuellen Benutzers
+
+        return (List<Notes>) noteRepository.findByUser(user);
     }
 
-    public List<Notes> filterNotes(String tag, String type, LocalDate startDate, LocalDate endDate, String category){
-        if (tag != null) tag = tag.toLowerCase();
-        if (type != null) type = type.toLowerCase();
+    public List<Notes> filterNotes(User user, String tag, NoteType type, Long categoryId, LocalDate createdAt, LocalDate toDate){
+        if (tag != null) {
+            tag = tag.toLowerCase();
+        }
 
-        return noteRepository.filterNotes(tag, type, startDate, endDate, category);
+        // Filtern nur für den Benutzer
+        List<Notes> filteredNotes = noteRepository.filterNotes(user, tag, type, categoryId, createdAt, toDate);
+        return filteredNotes;
+
     }
 
 }
