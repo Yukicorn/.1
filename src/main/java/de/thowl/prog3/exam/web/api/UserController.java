@@ -51,11 +51,13 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user){
-        if(userServiceImpl.getUser(user.getName()) != null){
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        if (userServiceImpl.getUser(user.getName()) != null) {
             return ResponseEntity.badRequest().body("Username already exists");
         }
-        userServiceImpl.registerUser(user);
+        // Registrierung des Benutzers mit gehashtem Passwort
+        userServiceImpl.registerUser(user.getName(), user.getPassword(), user.getEmail());
         return ResponseEntity.ok("User successfully registered.");
     }
 }
+

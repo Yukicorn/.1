@@ -6,3 +6,5 @@ de\thowl\prog3\exam\web\gui\Dashboard.class
 de\thowl\prog3\exam\web\api\DataNotFoundException.class
 de\thowl\prog3\exam\storage\entities\User.class
 de\thowl\prog3\exam\service\UserService.class
+de\thowl\prog3\exam\storage\entities\Category.class
+de\thowl\prog3\exam\storage\entities\NoteType.class
