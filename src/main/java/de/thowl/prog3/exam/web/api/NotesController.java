@@ -113,17 +113,5 @@ public class NotesController {
         return ResponseEntity.ok(filteredNotes);
     }
 
-    @GetMapping("/notes/share/{shareableLink}")
-    public String viewSharedNote(@PathVariable String shareableLink, Model model) {
-        Optional<Notes> sharedNote = noteRepo.findByShareableLink(shareableLink); // Suche nach der Notiz mit der GUID
-
-        if (sharedNote == null) {
-            return "error/404"; // Wenn keine Notiz mit der GUID gefunden wurde
-        }
-
-        model.addAttribute("note", sharedNote); // Zeige die Notiz im Model an
-        return "sharedNote"; // Eine View für den Freigabelink
-    }
-
 
 }

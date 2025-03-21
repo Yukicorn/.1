@@ -38,6 +38,6 @@ public interface NotesRepository extends CrudRepository<Notes, Long>  {
 
     List<Notes> findByUser(User user);
 
-    Optional<Notes> findByShareableLink(String shareableLink);
+    Notes findByShareableLink(String shareableLink);
 }
 
