@@ -4,7 +4,9 @@ C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\service\impl\Us
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\service\NotesService.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\service\UserService.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\ServletInitializer.java
+C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\entities\Category.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\entities\Notes.java
+C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\entities\NoteType.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\entities\User.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\repositories\NotesRepository.java
 C:\Users\Anwender\Downloads\.2\src\main\java\de\thowl\prog3\exam\storage\repositories\UserRepository.java

@@ -30,9 +30,16 @@ public class Notes {
     private String tags;
     private LocalDateTime createdAt = LocalDateTime.now(); // speichere datum, uhrzeit notiz erstellt
 
+    @Enumerated(EnumType.STRING)  // Art als ENUM speichern
+    private NoteType type;
+
     @ManyToOne  // Eine Notiz gehört zu einem Benutzer
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     @Lob
     @Column(columnDefinition = "LONGBLOB")  // Für große Binärdateien
