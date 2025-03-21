@@ -40,14 +40,9 @@ public class RegistrationFormController {
         String email = formdata.getEmail();
         log.debug("Email ist: "+email);
 
-        //iwie übergabe an DB
-        //String[] register = {username, password, email};
-        //automatische id zuteilung siehe User?? gehört id zu aktiver sessionerkennung oder zu nutzererkennung in db?
-        //log.debug(Arrays.toString(register));
-
         svc.registerUser(username, password, email); // Speichert den Benutzer in der DB
 
-        return "userform";
+        return "loginform";
     }
 
 }

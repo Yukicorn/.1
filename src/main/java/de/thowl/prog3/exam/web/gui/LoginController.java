@@ -36,12 +36,9 @@ public class LoginController {
         if (user != null) {
             session.setAttribute("user", user); // Benutzer in Session speichern
             log.debug("Benutzer erfolgreich in Session gespeichert: "+user.getName());
-            return "redirect:/createNote";
+            return "redirect:/dashboard";
         }
         return "login"; // Bei Fehler zurück zum Login
     }
-
-
-    //how tf geht logout??
 
 }

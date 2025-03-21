@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Hoffentlich funktioniert das ( vermutlich nicht)">
+    <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Fehlerbehaftet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createNote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/NotesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/service/impl/NotesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/api/NotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/RegistrationFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/RegistrationFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/createNote.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createNote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registerUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registerUser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,24 +46,13 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Yukicorn&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Yukicorn/.1.git&quot;,
-    &quot;accountId&quot;: &quot;dd14ff1a-bd8d-4e4b-b92a-0da4fce74913&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -42,21 +60,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ExamApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.exam [install].executor": "Run",
-    "Maven.exam [spring-boot:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.exam [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,38 +89,30 @@
       <option name="project" value="LOCAL" />
       <updated>1741985797863</updated>
     </task>
-    <task id="LOCAL-00002" summary="Passwort Hashing works &lt;3">
+    <task id="LOCAL-00002" summary="Dashboard vorhanden">
       <option name="closed" value="true" />
-      <created>1742387408487</created>
+      <created>1742228870787</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1742387408487</updated>
+      <updated>1742228870787</updated>
     </task>
-    <task id="LOCAL-00003" summary="Passwort Hashing works &lt;3">
+    <task id="LOCAL-00003" summary="Fehlerbehaftet">
       <option name="closed" value="true" />
-      <created>1742387414780</created>
+      <created>1742553383167</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1742387414780</updated>
+      <updated>1742553383167</updated>
     </task>
-    <task id="LOCAL-00004" summary="Hoffentlich funktioniert das ( vermutlich nicht)">
-      <option name="closed" value="true" />
-      <created>1742552797988</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742552797988</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CreateNoteFunktioniert" />
-    <MESSAGE value="Passwort Hashing works &lt;3" />
-    <MESSAGE value="Hoffentlich funktioniert das ( vermutlich nicht)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hoffentlich funktioniert das ( vermutlich nicht)" />
+    <MESSAGE value="Dashboard vorhanden" />
+    <MESSAGE value="Fehlerbehaftet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fehlerbehaftet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

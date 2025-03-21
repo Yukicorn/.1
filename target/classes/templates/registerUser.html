@@ -13,19 +13,14 @@
 
     <form class="form" method="POST" action="/register">
         <label for="uname">Benutzername:</label>
-        <input type="text" id="uname" name="username"/>
+        <input type="text" id="uname" name="username" required/>
         <label for="email">E-Mail-Adresse:</label>
         <input type="text" id="email" name="email"/>
         <label for="passwort">Passwort:</label>
-        <input type="text" id="passwort" name="password"/>
+        <input type="password" id="passwort" name="password" required/>
 
         <p></p>
         <input type="submit" value="Registrieren">
-    </form>
-
-    <!-- logout.html -->
-    <form th:action="@{/logout}" method="post">
-        <button type="submit">Logout</button>
     </form>
 
 </body>

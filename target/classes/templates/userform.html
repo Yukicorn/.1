@@ -17,9 +17,10 @@
         <input type="submit" value="Anzeigen">
     </form>
 
-<!--Link zum Weiterleiten auf registerUSerSeite-->
-    <p></p>
-    <a href="/register">Neues Benutzerkonto erstellen</a>
+    <!-- logout.html -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
 
 </body>
 </html>
