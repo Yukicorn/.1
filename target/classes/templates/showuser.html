@@ -15,6 +15,10 @@
     Name=<div th:text="${user.username}">USER_NAME</div>
     E-Mail=<div th:text="${user.email}">USER_EMAIL</div>
 
+    <!-- logout.html -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
 
 </body>
 </html>

@@ -41,7 +41,4 @@ public class LoginController {
         return "login"; // Bei Fehler zurück zum Login
     }
 
-
-    //how tf geht logout??
-
 }

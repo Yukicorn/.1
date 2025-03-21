@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URLConnection;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +41,7 @@ public class NotesController {
     }
 
     @PostMapping("/createNote")
-    public String saveNote(@ModelAttribute Notes note, @RequestParam("imageFile") MultipartFile file, HttpSession session) throws IOException, DataNotFoundException {
+    public String saveNote(@ModelAttribute Notes note, @RequestParam("imageFile") MultipartFile file, HttpSession session, String category) throws IOException, DataNotFoundException {
         // Prüfen, ob eine Datei hochgeladen wurde
         if (!file.isEmpty()) {
             // Bild als Byte-Array setzen
@@ -50,7 +52,7 @@ public class NotesController {
         }
 
         // Speichern der Notiz
-        noteSvc.saveNote(note, session);
+        noteSvc.saveNote(note, session, category);
 
         // Weiterleitung zur Seite, z.B. eine Bestätigung oder zur Anzeige der Notizen
         return "noteOverview";  // Weiterleitung nach dem Speichern (hier der View-Name)
@@ -68,6 +70,17 @@ public class NotesController {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/filter")
+    public ResponseEntity<List<Notes>> filterNotes(
+            @RequestParam(required = false) String tag,
+            @RequestParam(required = false) String type,
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDate startDate,
+            @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDate endDate){
+
+        List<Notes> filteredNotes = noteSvcImpl.filterNotes(tag,type,startDate,endDate, category);
+        return ResponseEntity.ok(filteredNotes);
+    }
 
 
 }

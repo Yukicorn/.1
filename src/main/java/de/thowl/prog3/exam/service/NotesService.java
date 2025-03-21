@@ -11,5 +11,5 @@ public interface NotesService {
 
     //public Notes saveNote(Notes note, String username) throws DataNotFoundException;
 
-    public Notes saveNote(Notes note, HttpSession session) throws DataNotFoundException;
+    public Notes saveNote(Notes note, HttpSession session, String category) throws DataNotFoundException;
 }

@@ -32,24 +32,6 @@
     <p>Es gibt keine Notizen.</p>
 </div>
 
-<h1>Notizen filtern</h1>
-<form action="/api/notes/filter" method="GET">
-    <input type="text" name="tag" placeholder="Schlagwort">
-    <input type="text" name="type" placeholder="Art">
-    <input type="date" id="startDate" name="startDate">
-    <input type="date" id="endDate" name="endDate">
-    <button type="submit">Filtern</button>
-</form>
-
-<form action="/api/notes/create" method="POST">
-    <label for="category">Kategorie:</label>
-    <select name="category">
-        <option th:each="cat : ${categories}" th:value="${cat.name}" th:text="${cat.name}"></option>
-    </select>
-
-    <button type="submit">Speichern</button>
-</form>
-
 <!-- logout.html -->
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>
