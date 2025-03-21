@@ -16,6 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -25,6 +26,7 @@ import java.net.URLConnection;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Slf4j
 @RestController
@@ -109,6 +111,18 @@ public class NotesController {
         }
 
         return ResponseEntity.ok(filteredNotes);
+    }
+
+    @GetMapping("/notes/share/{shareableLink}")
+    public String viewSharedNote(@PathVariable String shareableLink, Model model) {
+        Optional<Notes> sharedNote = noteRepo.findByShareableLink(shareableLink); // Suche nach der Notiz mit der GUID
+
+        if (sharedNote == null) {
+            return "error/404"; // Wenn keine Notiz mit der GUID gefunden wurde
+        }
+
+        model.addAttribute("note", sharedNote); // Zeige die Notiz im Model an
+        return "sharedNote"; // Eine View für den Freigabelink
     }
 
 

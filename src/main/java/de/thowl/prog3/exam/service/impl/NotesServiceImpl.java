@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -47,6 +48,10 @@ public class NotesServiceImpl implements NotesService{
         log.debug("Notiztitel ist: " + note.getTitle());
 
         log.debug("Image "+note.getImage());
+
+        // GUID für den Freigabelink generieren und zuweisen
+        String generatedLink = UUID.randomUUID().toString();
+        note.setShareableLink(generatedLink); // Speichern der GUID
 
         if (categoryId != null) {
             Category category = categoryService.getCategoryById(categoryId);

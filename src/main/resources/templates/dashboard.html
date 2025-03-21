@@ -57,6 +57,13 @@
     <button type="submit">Filtern</button>
 </form>
 
+<th:block th:each="note : ${notesList}">
+    <div>
+        <h3 th:text="${note.title}"></h3>
+        <a th:href="@{/notes/share/{shareableLink}(shareableLink=${note.shareableLink})}">Notiz teilen</a>
+    </div>
+</th:block>
+
 <!-- logout.html -->
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>

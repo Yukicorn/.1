@@ -44,4 +44,7 @@ public class Notes {
     @Lob
     @Column(columnDefinition = "LONGBLOB")  // Für große Binärdateien
     private byte[] image;  // Hier wird das Bild als Byte-Array gespeichert
+
+    @Column(name = "shareable_link", unique = true)
+    private String shareableLink; // GUID für den Freigabelink
 }
