@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 
@@ -28,7 +28,7 @@ public class Notes {
     @Column(columnDefinition = "TEXT") //TEXT kann längere Texte speichern als Varchar sinnvoll?
     private String content;
     private String tags;
-    private LocalDateTime createdAt = LocalDateTime.now(); // speichere datum, uhrzeit notiz erstellt
+    private LocalDate createdAt = LocalDate.now(); // speichere datum, uhrzeit notiz erstellt
 
     @Enumerated(EnumType.STRING)  // Art als ENUM speichern
     private NoteType type;

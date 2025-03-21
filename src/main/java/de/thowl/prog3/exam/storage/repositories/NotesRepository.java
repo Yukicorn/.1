@@ -1,4 +1,5 @@
 package de.thowl.prog3.exam.storage.repositories;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -30,7 +31,7 @@ public interface NotesRepository extends CrudRepository<Notes, Long>  {
             @Param("user") User user,
             @Param("tags") String tags,
             @Param("type") NoteType type,
-            @Param("category") Long categoryId,
+            @Param("category") Category category,
             @Param("createdAt") LocalDate createdAt,
             @Param("toDate") LocalDate toDate
     );
