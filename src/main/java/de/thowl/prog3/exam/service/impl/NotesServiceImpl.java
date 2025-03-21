@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -48,7 +49,20 @@ public class NotesServiceImpl implements NotesService{
 
         log.debug("Image "+note.getImage());
 
-        Category category = categoryService.getCategoryById(categoryId);
+        // GUID für den Freigabelink generieren und zuweisen
+        String generatedLink = UUID.randomUUID().toString();
+        note.setShareableLink(generatedLink); // Speichern der GUID
+
+        if (categoryId != null) {
+            Category category = categoryService.getCategoryById(categoryId);
+            if (category != null) {
+                note.setCategory(category);
+            } else {
+                log.warn("Kategorie mit ID {} nicht gefunden!", categoryId);
+            }
+        } else {
+            log.warn("categoryId ist null!");
+        }
 
         return noteRepository.save(note);
     }
@@ -66,13 +80,21 @@ public class NotesServiceImpl implements NotesService{
         return (List<Notes>) noteRepository.findByUser(user);
     }
 
-    public List<Notes> filterNotes(User user, String tag, NoteType type, Long categoryId, LocalDate createdAt, LocalDate toDate){
+    public List<Notes> filterNotes(User user, String tag, NoteType type, Long categoryId, LocalDate createdAt, LocalDate toDate) throws DataNotFoundException {
         if (tag != null) {
             tag = tag.toLowerCase();
         }
 
+        Category category = null;
+        if (categoryId != null) {
+            category = categoryService.getCategoryById(categoryId);
+        }
+
+        log.debug("Filter: tags={}, type={}, categoryId={}, createdAt={}, toDate={}",
+                tag, type, categoryId, createdAt, toDate);
+
         // Filtern nur für den Benutzer
-        List<Notes> filteredNotes = noteRepository.filterNotes(user, tag, type, categoryId, createdAt, toDate);
+        List<Notes> filteredNotes = noteRepository.filterNotes(user, tag, type, category, createdAt, toDate);
         return filteredNotes;
 
     }

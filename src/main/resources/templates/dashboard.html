@@ -19,6 +19,7 @@
             <p th:text="${note.content}"></p>
             <p><strong>Tags:</strong> <span th:text="${note.tags}"></span></p>
             <p><strong>Erstellt am:</strong> <span th:text="${note.createdAt}"></span></p>
+            <p th:text="${note.category}"></p>
 
             <!-- Hier kannst du einen Link zum Anzeigen des Bildes hinzufügen, falls es vorhanden ist -->
             <div th:if="${note.image != null}">
@@ -33,17 +34,35 @@
 </div>
 
 <h1>Notizen filtern</h1>
-<form action="/api/notes/filter" method="GET">
-    <input type="text" name="tag" placeholder="Schlagwort">
-    <input type="text" name="type" placeholder="Art">
-    <input type="date" id="startDate" name="startDate">
-    <input type="date" id="endDate" name="endDate">
-    <label for="category">Kategorie:</label>
-    <select id="category" name="categoryId">
-        <option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}"></option>
+<form method="GET" action="/dashboard">
+    <input type="text" name="tags" placeholder="Schlagwort">
+
+    <select name="type">
+        <option value="">Alle</option>
+        <option value="TEXT">Text</option>
+        <option value="BILD">Bild</option>
+        <option value="LINK">Link</option>
     </select>
+
+    <select name="categoryId">
+        <option value="">Alle Kategorien</option>
+        <th:block th:each="category : ${categories}">
+            <option th:value="${category.id}" th:text="${category.name}"></option>
+        </th:block>
+    </select>
+
+    <input type="date" name="createdAt">
+    <input type="date" name="toDate">
+
     <button type="submit">Filtern</button>
 </form>
+
+<th:block th:each="note : ${notesList}">
+    <div>
+        <h3 th:text="${note.title}"></h3>
+        <a th:href="@{/notes/share/{shareableLink}(shareableLink=${note.shareableLink})}">Notiz teilen</a>
+    </div>
+</th:block>
 
 <!-- logout.html -->
 <form th:action="@{/logout}" method="post">

@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 
@@ -28,7 +28,7 @@ public class Notes {
     @Column(columnDefinition = "TEXT") //TEXT kann längere Texte speichern als Varchar sinnvoll?
     private String content;
     private String tags;
-    private LocalDateTime createdAt = LocalDateTime.now(); // speichere datum, uhrzeit notiz erstellt
+    private LocalDate createdAt = LocalDate.now(); // speichere datum, uhrzeit notiz erstellt
 
     @Enumerated(EnumType.STRING)  // Art als ENUM speichern
     private NoteType type;
@@ -44,4 +44,7 @@ public class Notes {
     @Lob
     @Column(columnDefinition = "LONGBLOB")  // Für große Binärdateien
     private byte[] image;  // Hier wird das Bild als Byte-Array gespeichert
+
+    @Column(name = "shareable_link", unique = true)
+    private String shareableLink; // GUID für den Freigabelink
 }
