@@ -7,13 +7,20 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.mindrot.jbcrypt.BCrypt;
-
 import de.thowl.prog3.exam.service.UserService;
 import de.thowl.prog3.exam.storage.entities.User;
 import de.thowl.prog3.exam.storage.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Service-Klasse zur Verwaltung der Benutzer.
+ * Diese Klasse enthält Methoden zum Registrieren und Authentifizieren der Benutzer.
+ * Sie implementiert die Klasse UserService.
+ *
+ * @author Celeste Holsteg, Monique Rausche
+ * @version 23.03.2025
+ */
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
@@ -21,6 +28,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository repository;
 
+    /**
+     * Die Methode holt einen Benutzer anhand der ID.
+     * Wirft eine IllegalArgumentException, wenn der Benutzer nicht gefunden wird.
+     *
+     * @param id ID des Benutzers
+     * @return gefundener Benutzer
+     */
     @Override
     public User getUser(long id) {
         log.debug("entering getUser(id={})", id);
@@ -28,6 +42,13 @@ public class UserServiceImpl implements UserService {
         return result.orElseThrow(IllegalArgumentException::new);
     }
 
+    /**
+     * Die Methode holt einen Benutzer anhand des Benutzernamens.
+     * Wirft eine IllegalArgumentException, wenn der Benutzer nicht gefunden wird.
+     *
+     * @param name Name des Benutzers
+     * @return gefundener Benutzer
+     */
     @Override
     public User getUser(String name) {
         log.debug("entering getUser(name={})", name);
@@ -35,6 +56,11 @@ public class UserServiceImpl implements UserService {
         return result.orElseThrow(IllegalArgumentException::new);
     }
 
+    /**
+     * Die Methode holt alle Benutzer aus der Datenbank.
+     *
+     * @return Liste aller Benutzer
+     */
     @Override
     public List<User> getAllUsers() {
         log.debug("entering getAllUsers()");
@@ -45,15 +71,19 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
-    public User registerUser (User user){
-        return repository.save(user);
-    }//wird die gebrauchT?
-
-    @Transactional
+    /**
+     * Die Methode registriert einen neuen Benutzer mit Benutzernamen, Passwort und E-Mail.
+     * Zudem werden doppelte Benutzernamen verhindert und der Benutzer nach dem Hashen des Passworts gespeichert.
+     *
+     * @param username Benutzername des neuen Benutzers
+     * @param password Passwort des neuen Benutzers
+     * @param email E-Mail-Adresse des neuen Benutzers
+     */
+    @Transactional//Stellt sicher, dass die Operation atomar ist
     public void registerUser(String username, String password, String email) {
         log.debug("entering registerUser(username={}, email={})", username, email);
 
-        // Benutzer anhand des Benutzernamens finden (doppelte Benutzernamen verhindern)
+        //Prüfen ob Benutzer bereits existiert
         Optional<User> existingUser = repository.findUserByName(username);
         if (existingUser.isPresent()) {
             throw new IllegalArgumentException("Benutzername bereits vergeben");
@@ -71,6 +101,13 @@ public class UserServiceImpl implements UserService {
         log.debug("Benutzer {} erfolgreich registriert", username);
     }
 
+    /**
+     * Die Methode authentifiziert einen Benutzer anhand des Benutzernamens und des Passworts.
+     *
+     * @param username Benutzername des Benutzers
+     * @param password Passwort des Benutzers
+     * @return authentifizierter Benutzer
+     */
     public User authenticate(String username, String password) {
         log.debug("entering authenticate(username={})", username);
 

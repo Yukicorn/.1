@@ -27,7 +27,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-
 /**
  * Controller für das Erstellen von Notizen.
  * Diese Klasse steuert das Erstellen einer neuen Notiz und Hochladen von Bildern,
@@ -51,7 +50,7 @@ public class CreateNoteController {
     /**
      * Diese Methode zeigt das Formular zum Erstellen einer neuen Notiz an, holt alle Kategorien aus der Datenbank und gibt sie an das Template weiter.
      * @param model  Model-Objekt, das an Thymeleaf-Template übergeben wird, um die Daten anzuzeigen.
-     * @return Thymeleaf-Template "createNote", dass das Formular rendert.
+     * @return Thymeleaf-Template "createNote", das das Formular rendert.
      */
     @GetMapping("/createNote")
     public String createNoteForm(Model model) {
@@ -78,7 +77,7 @@ public class CreateNoteController {
     @PostMapping("/createNote")
     public String createNote(@ModelAttribute Notes note, CreateNoteForm formdata, HttpSession session, @RequestParam("imageFile")MultipartFile file, @RequestParam("categoryId") Long categoryId) throws DataNotFoundException, IOException {
         log.debug("processing createNoteForm");
-// Überprüft, ob die Session null ist, was auf ein Problem mit der Benutzeranmeldung hinweist.
+        // Überprüft, ob die Session null ist, was auf ein Problem mit der Benutzeranmeldung hinweist.
         if (session == null) {
             log.error("HttpSession ist NULL! Die Session wurde nicht korrekt verwaltet.");
             throw new DataNotFoundException("Session existiert nicht.");
@@ -103,10 +102,10 @@ public class CreateNoteController {
         // Holt die Tags der Notiz aus den Formulardaten und setzt sie.
         String notesTags = formdata.getTags();
         note.setTags(notesTags);
-// Holt den Inhalt der Notiz aus den Formulardaten und setzt ihn.
+        // Holt den Inhalt der Notiz aus den Formulardaten und setzt ihn.
         String notesContent = formdata.getContent();
         note.setContent(notesContent);
-// Überprüft, ob eine Bilddatei hochgeladen wurde und setzt das Bild als Byte-Array
+        // Überprüft, ob eine Bilddatei hochgeladen wurde und setzt das Bild als Byte-Array
         if (!file.isEmpty()) {
             // Bild als Byte-Array setzen
             note.setImage(file.getBytes());
@@ -121,9 +120,9 @@ public class CreateNoteController {
             log.error("Kategorie-ID ist NULL!");
             throw new IllegalArgumentException("Kategorie-ID darf nicht null sein!");
         }
-// Speichert die Notiz durch Verwendung des NotesServiceImpl
+        // Speichert die Notiz durch Verwendung des NotesServiceImpl
         svc.saveNote(note, session, categoryId);
-// Speichert die Notiz durch Verwendung des NotesServiceImpl
+        // gibt das Dashboard-Template zurück
         return "dashboard";
     }
 

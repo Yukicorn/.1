@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Diese Klasse ist ein REST-Controller zur Verwaltung von Kategorien. Sie bietet Endpunkte zum Abrufen aller Kategorien, Erstellen einer neuen Kategorie
  * sowie zum Anzeigen des Formulars zur Erstellung einer Notiz.
- * @Author Celeste Holsteg, Monique Rausche
+ * @author Celeste Holsteg, Monique Rausche
  * @version 21.03.2025
  */
 
@@ -22,13 +22,13 @@ public class CategoryController {
 
     private final CategoryService categoryService;
 
-
     /**
      * Konstruktor für den CategoryController, wird mit dem CategoryService initialisiert, um auf die Kategorien-Logik zugreifen zu können.
      *
      * @param categoryService Service, der die Kategorien verwaltet.
      */
- @Autowired
+
+    @Autowired
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }

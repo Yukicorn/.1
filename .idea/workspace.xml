@@ -6,29 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a1a5ea36-0994-4565-b1ba-fa4adc520005" name="Changes" comment="Hoffentlich funktioniert das ( vermutlich nicht)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/Notes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/NotesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/storage/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/NotesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/NotesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/api/NotesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/CreateNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes$NotesBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/Notes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/storage/repositories/NotesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/CreateNoteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/thowl/prog3/exam/web/gui/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.service.TestUserService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.service.TestUserService.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.storage.TestUserRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-de.thowl.prog3.exam.storage.TestUserRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.service.TestUserService.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.service.TestUserService.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.storage.TestUserRepository.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/de.thowl.prog3.exam.storage.TestUserRepository.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/RegistrationFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/ShareNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/ShareNoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/CreateNoteForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/RegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/UserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/thowl/prog3/exam/web/gui/form/UserForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
     "Maven.exam [spring-boot:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Holsteg/Downloads/Exam-Template/Benutzersession-Sicherheit/.1",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
