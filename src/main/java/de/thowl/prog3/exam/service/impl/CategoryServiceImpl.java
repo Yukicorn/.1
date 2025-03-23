@@ -29,7 +29,7 @@ public class CategoryServiceImpl implements CategoryService {
      * @param categoryRepository Repository für den Zugriff auf Kategorien in der Datenbank
      */
     @Autowired
-    public CategoryServiceImpl(CategoryRepository categoryRepository){//wird Methode gebraucht?
+    public CategoryServiceImpl(CategoryRepository categoryRepository){
         this.categoryRepository = categoryRepository;
     }
 
