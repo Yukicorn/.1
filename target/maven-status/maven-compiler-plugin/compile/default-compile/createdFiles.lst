@@ -3,6 +3,7 @@ de\thowl\prog3\exam\service\impl\CategoryServiceImpl.class
 de\thowl\prog3\exam\storage\entities\Notes.class
 de\thowl\prog3\exam\service\NotesService.class
 de\thowl\prog3\exam\web\gui\Dashboard.class
+de\thowl\prog3\exam\web\gui\LogoutController.class
 de\thowl\prog3\exam\service\UserService.class
 de\thowl\prog3\exam\service\CategoryService.class
 de\thowl\prog3\exam\ServletInitializer.class
