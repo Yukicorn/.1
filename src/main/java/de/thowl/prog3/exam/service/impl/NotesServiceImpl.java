@@ -78,7 +78,7 @@ public class NotesServiceImpl implements NotesService{
         // Lade nur die Notizen des aktuellen Benutzers
 
         return (List<Notes>) noteRepository.findByUser(user);
-    }
+    }//wird die gebraucht?
 
     public List<Notes> filterNotes(User user, String tag, NoteType type, Long categoryId, LocalDate createdAt, LocalDate toDate) throws DataNotFoundException {
         if (tag != null) {

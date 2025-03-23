@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import de.thowl.prog3.exam.service.UserService;
 import de.thowl.prog3.exam.web.gui.form.RegistrationForm;
 import de.thowl.prog3.exam.web.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +18,7 @@ public class RegistrationFormController {
 
     @Autowired
     @Qualifier("usermapper")
-    private UserMapper mapper = new UserMapper();
+    private UserMapper mapper = new UserMapper();//wird der gebraucht?
 
     @Autowired
     UserServiceImpl svc;

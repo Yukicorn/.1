@@ -97,7 +97,7 @@ public class CreateNoteController {
 
         svc.saveNote(note, session, categoryId);
 
-        return "dashboard";
+        return "redirect:/dashboard";
     }
 
 }

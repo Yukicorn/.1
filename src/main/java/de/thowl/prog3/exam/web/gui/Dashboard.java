@@ -52,7 +52,7 @@ public class Dashboard {
             throw new DataNotFoundException("Kein Benutzer in der Session gefunden.");
         }
 
-        // 🟢 Filtermethoden mit den Parametern aufrufen
+        // Filtermethoden mit den Parametern aufrufen
         List<Notes> notesList = noteSvcImpl.filterNotes(user, tags, type, categoryId, createdAt, toDate);
 
         model.addAttribute("notesList", notesList);

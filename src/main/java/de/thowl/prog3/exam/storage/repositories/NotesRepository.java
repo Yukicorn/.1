@@ -17,6 +17,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface NotesRepository extends CrudRepository<Notes, Long>  {
     List<Notes> findByTagsContainingIgnoreCase(String tag);
+
     @Override
     Optional<Notes> findById(Long id);
 

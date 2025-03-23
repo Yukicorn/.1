@@ -47,8 +47,9 @@ public class UserServiceImpl implements UserService {
 
     public User registerUser (User user){
         return repository.save(user);
-    }
-@Transactional
+    }//wird die gebrauchT?
+
+    @Transactional
     public void registerUser(String username, String password, String email) {
         log.debug("entering registerUser(username={}, email={})", username, email);
 
@@ -69,7 +70,6 @@ public class UserServiceImpl implements UserService {
         repository.save(user);
         log.debug("Benutzer {} erfolgreich registriert", username);
     }
-
 
     public User authenticate(String username, String password) {
         log.debug("entering authenticate(username={})", username);

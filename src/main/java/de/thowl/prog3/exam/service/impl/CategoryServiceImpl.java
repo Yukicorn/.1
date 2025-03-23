@@ -1,6 +1,5 @@
 package de.thowl.prog3.exam.service.impl;
 
-
 import de.thowl.prog3.exam.service.CategoryService;
 import de.thowl.prog3.exam.storage.entities.Category;
 import de.thowl.prog3.exam.web.api.DataNotFoundException;
@@ -17,7 +16,7 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     @Autowired
-    public CategoryServiceImpl(CategoryRepository categoryRepository){
+    public CategoryServiceImpl(CategoryRepository categoryRepository){//wird Methode gebraucht?
         this.categoryRepository = categoryRepository;
     }
 

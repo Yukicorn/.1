@@ -1,6 +1,5 @@
 package de.thowl.prog3.exam.web.api;
 
-
 import de.thowl.prog3.exam.service.CategoryService;
 import de.thowl.prog3.exam.service.NotesService;
 import de.thowl.prog3.exam.service.impl.NotesServiceImpl;
@@ -16,7 +15,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,7 +24,6 @@ import java.net.URLConnection;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Slf4j
 @RestController
