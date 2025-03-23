@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: de.thowl.prog3.exam.service.TestUserService
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.336 s -- in de.thowl.prog3.exam.service.TestUserService
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.143 s -- in de.thowl.prog3.exam.service.TestUserService
